@@ -4,3 +4,7 @@ This repo has the configuration of the function printf
 
 - Dionisio
 - Jaime
+
+
+License
+MIT
