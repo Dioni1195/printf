@@ -4,8 +4,8 @@
 
 int _printf(const char *format, ...);
 int _putchar(char c);
-void _str_print(char *s);
-void (*get_op(char *s))(va_list lst);
+int _str_print(char *s);
+int (*get_op(char *s))(va_list lst);
 /**
   * struct op - Struct op
   *
@@ -15,6 +15,6 @@ void (*get_op(char *s))(va_list lst);
 typedef struct op
 {
 	char *op;
-	void (*f)(va_list lst);
+	int (*f)(va_list lst);
 } op_t;
 #endif
