@@ -8,8 +8,9 @@
 */
 int _printf(const char *format, ...)
 {
-	int i = 0;
+	int i = 0, cnt = 0;
 	va_list lst;
+	char *p;
 
 	va_start(lst, format);
 
@@ -21,14 +22,30 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			(*get_op(format[i + 1]))(va_arg(lst, int));
+			switch (format[i + 1])
+			{
+				case 'c':
+					_putchar(va_arg(lst, int));
+					cnt++;
+					break;
+				case 's':
+					p = va_arg(lst, char *);
+					_str_print(p);
+					cnt += _str_len(p);
+					break;
+				case '%':
+					_putchar('%');
+					cnt++;
+					break;
+			}
 		}
 		else if (format[i - 1] != '%')
 		{
 			_putchar(format[i]);
+			cnt++;
 		}
 		i++;
 	}
 	va_end(lst);
-	return (i);
+	return (cnt);
 }

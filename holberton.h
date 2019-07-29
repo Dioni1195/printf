@@ -2,6 +2,7 @@
 #define Holberton
 #include <stdarg.h>
 
+int _str_len(char *s);
 int _printf(const char *format, ...);
 int _putchar(char c);
 int _str_print(char *s);
