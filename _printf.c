@@ -19,9 +19,13 @@ int _printf(const char *format, ...)
 	}
 	while (format[i] != '\0')
 	{
-		if (format[i] == "%")
+		if (format[i] == '%')
 		{
-			(*get_op(format[i + 1])(va_arg(lst, int)));
+			(*get_op(format[i + 1]))(va_arg(lst, int));
+		}
+		else if (format[i - 1] != '%')
+		{
+			_putchar(format[i]);
 		}
 		i++;
 	}
