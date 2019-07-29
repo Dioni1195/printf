@@ -42,20 +42,22 @@ int _printf(const char *format, ...)
 		{
 			switch (format[i + 1])
 			{
-				case 'c':
-					_putchar(va_arg(lst, int));
-					cnt++;
-					break;
-				case 's':
-					p = va_arg(lst, char *);
-					cnt += _case_s(p);
-					break;
-				case '%':
-					_putchar('%');
-					cnt++;
-					break;
-				default:
-					_putchar(format[i]);
+			case 'c':
+				_putchar(va_arg(lst, int));
+				cnt++;
+				break;
+			case 's':
+				p = va_arg(lst, char *);
+				cnt += _case_s(p);
+				break;
+			case '%':
+				_putchar('%');
+				cnt++;
+				break;
+			default:
+				_putchar(format[i]);
+				cnt++;
+				break;
 			}
 		}
 		else if (format[i - 1] != '%')
