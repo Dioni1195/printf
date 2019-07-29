@@ -5,7 +5,7 @@
 *
 * Return: Nothing
 */
-void _str_print(char *s)
+int _str_print(char *s)
 {
 	int i;
 
@@ -13,4 +13,5 @@ void _str_print(char *s)
 	{
 		_putchar(s[i]);
 	}
+	return (0);
 }
