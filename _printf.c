@@ -37,6 +37,8 @@ int _printf(const char *format, ...)
 					_putchar('%');
 					cnt++;
 					break;
+				default :
+					_putchar('%');
 			}
 		}
 		else if (format[i - 1] != '%')
