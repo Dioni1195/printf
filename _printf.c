@@ -52,6 +52,7 @@ int _printf(const char *format, ...)
 				break;
 			case '%':
 				_putchar('%');
+				i++;
 				cnt++;
 				break;
 			default:
@@ -59,6 +60,8 @@ int _printf(const char *format, ...)
 				cnt++;
 				break;
 			}
+			i++;
+			continue;
 		}
 		else if (format[i - 1] != '%')
 		{
