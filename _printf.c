@@ -20,7 +20,6 @@ int _case_s(char *p)
 		return (_str_len("(null)"));
 	}
 }
-
 /**
  * _printf - function that print strings and values
  * @format: format of value to print
@@ -38,17 +37,23 @@ int _printf(const char *format, ...)
 		return (-1);
 	while (format[i] != '\0')
 	{
-		if (format[i] == '%')
+		if (format[i + 1] == '\0' && format[i] == '%')
+		{
+			return (cnt = -1);
+		}
+		else if (format[i] == '%')
 		{
 			switch (format[i + 1])
 			{
 			case 'c':
 				_putchar(va_arg(lst, int));
 				cnt++;
+				i++;
 				break;
 			case 's':
 				p = va_arg(lst, char *);
 				cnt += _case_s(p);
+				i++;
 				break;
 			case '%':
 				_putchar('%');
@@ -58,16 +63,18 @@ int _printf(const char *format, ...)
 			default:
 				_putchar(format[i]);
 				cnt++;
+				
 				break;
 			}
 			i++;
 			continue;
 		}
-		else if (format[i - 1] != '%')
+		else
 		{
 			_putchar(format[i]);
 			cnt++;
 		}
+		
 		i++;
 	}
 	va_end(lst);
