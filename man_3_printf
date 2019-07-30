@@ -1,0 +1,45 @@
+.TH _PRINTF 1
+
+.SH NAME
+_printf \- format and print data
+
+.SH SYNOPSIS
+.B _printf
+.I FORMAT
+[\fB\fR\fIARGUMENT\fR]...
+
+.SH DESCRIPTION
+print ARGUMENT(s) according to the FORMAT.
+
+.RE 
+FORMAT  controls the output as in C printf.  Interpreted sequences are:
+
+.RE
+\\" double quote
+
+.RE
+\\ backslash
+
+.RE
+\\b backspace
+
+.RE
+\\n newline
+
+.RE
+\\t horizontal tab
+
+.RE
+\%%% a single %
+
+NOTE: Variable widths or precision are not handled.
+
+.SH AUTHOR
+Writen by Dionisio Arango and Jaime Velez
+
+.SH SEE ALSO
+man printf
+
+
+
+
