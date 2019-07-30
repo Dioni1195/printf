@@ -27,9 +27,15 @@ int _prt_nmb(int n)
 */
 int _print_int(int lst)
 {
-	int cnt = _prt_nmb(lst);
+	int cnt = 0;
 
+	if (lst < 0)
+	{
+		_putchar('-');
+		cnt = _prt_nmb(lst * -1);
+		cnt++;
+	}
+	else
+		cnt = _prt_nmb(lst);
 	return (cnt);
 }
-
-
