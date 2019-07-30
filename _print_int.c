@@ -25,7 +25,7 @@ int _prt_nmb(int n)
   *
   * Return: The count of digits
 */
-int _print_int( va_list lst)
+int _print_int(int lst)
 {
 	int cnt = _prt_nmb(lst);
 

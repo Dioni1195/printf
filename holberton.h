@@ -10,5 +10,5 @@ int _putchar(char c);
 int _str_print(char *s);
 int (*get_op(char *s))(va_list lst);
 int cases(const char *format, va_list lst);
-_print_int(va_list lst);
+int _print_int(int lst);
 #endif

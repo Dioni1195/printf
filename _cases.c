@@ -36,10 +36,12 @@ int cases(const char *format, va_list lst)
 					i++, cnt++;
 					break;
 				case 'd':
-					_print_int(va_arg(lst, int));
+					cnt += _print_int(va_arg(lst, int));
+					i++;
 					break;
 				case 'i':
-					_print_int(var_arg(lst, int));
+					cnt += _print_int(va_arg(lst, int));
+					i++;
 					break;
 				default:
 					_putchar(format[i]);
