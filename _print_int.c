@@ -1,16 +1,18 @@
 #include "holberton.h"
 
 /**
- * _ptr_nmb - Print numbers recurively
- * @n: Numbers to be printed
- * Return: The count of iteractions
- */
+  * _prt_nmb - Print numbers recurively
+  * @n: Numbers to be printed
+  * Return: The count of iteractions
+  */
 int _prt_nmb(int n)
 {
 	int i;
 
 	if (n == 0)
+	{
 		return (0);
+	}
 	else
 	{
 		i = _prt_nmb(n / 10) + 1;
