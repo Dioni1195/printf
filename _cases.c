@@ -34,10 +34,10 @@ int *dflt(const char ch, va_list lst)
 		cnt += _print_int(va_arg(lst, int)), i++;
 		break;
 	case 'r':
-		cnt += _print_int(va_arg(lst, int)), i++;
+		p = va_arg(lst, char *), cnt += _case_r(p), i++;
 		break;
 	case 'R':
-		cnt += _print_int(va_arg(lst, int)), i++;
+		p = va_arg(lst, char *), cnt += _case_R(p), i++;
 		break;
 	default:
 		_putchar('%'), cnt++;
