@@ -5,7 +5,7 @@
 int _case_r(char *p);
 int _case_R(char *p);
 void _rev(char *p);
-void _rot13(char *p);
+char *_rot13(char *p);
 int _prt_nmb(unsigned int n);
 int _case_s(char *p);
 int _str_srch(char *);

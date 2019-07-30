@@ -7,7 +7,7 @@
  * Return: Print a String.
  *
 */
-void _rot13(char *p)
+char *_rot13(char *p)
 {
 	int i, j;
 	char let[52] = {'a',
@@ -39,7 +39,7 @@ void _rot13(char *p)
 			}
 		}
 	}
-	_str_print(p);
+	return (p);
 }
 
 /**
@@ -52,7 +52,7 @@ int _case_R(char *p)
 {
 	if (p != '\0')
 	{
-		_rot13(p);
+		_str_print(_rot13(p));
 		return (_str_len(p));
 	}
 	else
