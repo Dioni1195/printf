@@ -22,40 +22,29 @@ int cases(const char *format, va_list lst)
 		{
 			switch (format[i + 1])
 			{
-				case 'c':
-					_putchar(va_arg(lst, int));
-					cnt++, i++;
-					break;
-				case 's':
-					p = va_arg(lst, char *);
-					cnt += _case_s(p);
-					i++;
-					break;
-				case '%':
-					_putchar('%');
-					i++, cnt++;
-					break;
-				case 'd':
-					cnt += _print_int(va_arg(lst, int));
-					i++;
-					break;
-				case 'i':
-					cnt += _print_int(va_arg(lst, int));
-					i++;
-					break;
-				default:
-					_putchar(format[i]);
-					cnt++;
-					break;
+			case 'c':
+				_putchar(va_arg(lst, int)), cnt++, i++;
+				break;
+			case 's':
+				p = va_arg(lst, char *), cnt += _case_s(p), i++;
+				break;
+			case '%':
+				_putchar('%'), i++, cnt++;
+				break;
+			case 'd':
+				cnt += _print_int(va_arg(lst, int)), i++;
+				break;
+			case 'i':
+				cnt += _print_int(va_arg(lst, int)), i++;
+				break;
+			default:
+				_putchar(format[i]), cnt++;
+				break;
 			}
 			i++;
 		}
 		else
-		{
-			_putchar(format[i]);
-			cnt++;
-			i++;
-		}
+			_putchar(format[i]), cnt++, i++;
 	}
 	va_end(lst);
 	return (cnt);
