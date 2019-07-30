@@ -41,4 +41,4 @@ NOTE: Variable widths or precision are not handled.
 Writen by Dionisio Arango and Jaime Velez
 
 .SH SEE ALSO
-man printf
+man printf(1)
