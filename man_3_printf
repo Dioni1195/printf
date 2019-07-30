@@ -1,0 +1,60 @@
+.TH _PRINTF 1
+
+.SH NAME
+_printf \- format and print data
+
+.SH SYNOPSIS
+.B #include "holberton.h"
+.PP
+.B _printf(const char *\fR\fI format\fR, ...);
+
+.SH DESCRIPTION
+print ARGUMENT(s) according to the FORMAT.
+
+.RE
+The function _printf() write output to stdout, the standard output stream; and return the number of characters that it prints.
+
+.RE
+This function doesn't handle the flag characters, field width, precision or the length  modifiers.
+
+.RE
+FORMAT  controls the output as in C printf.  Interpreted sequences are:
+
+.RE
+%c - It is used to print characters.
+
+.RE
+%s - It is used to print strings of characters.
+
+.RE
+%d - It is used to print a decimal (base 10) number.
+
+.RE
+%i - It is used to print an integer in base 10.
+
+.RE
+\\" double quote
+
+.RE
+\\ backslash
+
+.RE
+\\b backspace
+
+.RE
+\\n newline
+
+.RE
+\\t horizontal tab
+
+.RE
+\\t vertical tab
+
+.RE
+\%%% a single %
+
+.SH AUTHOR
+Writen by Dionisio Arango and Jaime Velez
+
+.SH SEE ALSO
+man printf(1)
