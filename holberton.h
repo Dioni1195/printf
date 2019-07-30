@@ -1,7 +1,7 @@
 #ifndef Holberton
 #define Holberton
 #include <stdarg.h>
-int _prt_nmb(int n);
+int _prt_nmb(unsigned int n);
 int _case_s(char *p);
 int _str_srch(char *);
 int _str_len(char *s);
