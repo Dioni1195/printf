@@ -11,7 +11,7 @@ _printf \- format and print data
 .SH DESCRIPTION
 print ARGUMENT(s) according to the FORMAT.
 
-.RE 
+.RE
 FORMAT  controls the output as in C printf.  Interpreted sequences are:
 
 .RE
@@ -30,6 +30,9 @@ FORMAT  controls the output as in C printf.  Interpreted sequences are:
 \\t horizontal tab
 
 .RE
+\\t vertical tab
+
+.RE
 \%%% a single %
 
 NOTE: Variable widths or precision are not handled.
@@ -39,7 +42,3 @@ Writen by Dionisio Arango and Jaime Velez
 
 .SH SEE ALSO
 man printf
-
-
-
-
