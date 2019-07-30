@@ -5,7 +5,7 @@
   * @n: Numbers to be printed
   * Return: The count of iteractions
   */
-int _prt_nmb(int n)
+int _prt_nmb(unsigned int n)
 {
 	int i;
 
@@ -35,6 +35,11 @@ int _print_int(int lst)
 	{
 		_putchar('-');
 		cnt = _prt_nmb(lst * -1);
+		cnt++;
+	}
+	else if (lst == 0)
+	{
+		_putchar(0 + '0');
 		cnt++;
 	}
 	else
