@@ -1,5 +1,5 @@
 #include "holberton.h"
-
+#include <stdlib.h>
 /**
  * _rot13 - Desciphrate
  * @p: The array
@@ -9,7 +9,8 @@
 */
 char *_rot13(char *p)
 {
-	int i, j;
+	int i, j, c = 0;
+	char *cpy;
 	char let[52] = {'a',
 		'b', 'c', 'd', 'e', 'f', 'g', 'h',
 		'i', 'j', 'k', 'l', 'm', 'n', 'o',
@@ -28,18 +29,26 @@ char *_rot13(char *p)
 		'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
 		'K', 'L', 'M'};
 
-	for (i = 0; p[i] != '\0'; i++)
+	cpy = malloc(sizeof(char) * _str_len(p));
+	if (cpy == '\0')
+		return ('\0');
+	while (p[c] != '\0')
+	{
+		cpy[c] = p[c];
+		c++;
+	}
+	for (i = 0; cpy[i] != '\0'; i++)
 	{
 		for (j = 0; j <= 51; j++)
 		{
-			if (p[i] == let[j])
+			if (cpy[i] == let[j])
 			{
-				p[i] = rot[j];
+				cpy[i] = rot[j];
 				break;
 			}
 		}
 	}
-	return (p);
+	return (cpy);
 }
 
 /**
