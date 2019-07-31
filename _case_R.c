@@ -29,14 +29,15 @@ char *_rot13(char *p)
 		'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
 		'K', 'L', 'M'};
 
-	cpy = malloc(sizeof(char) * _str_len(p));
-	if (cpy == '\0')
-		return ('\0');
+	cpy = malloc(sizeof(char) * _str_len(p) + 1);
+	if (cpy == NULL)
+		return (NULL);
 	while (p[c] != '\0')
 	{
 		cpy[c] = p[c];
 		c++;
 	}
+	cpy[c] = '\0';
 	for (i = 0; cpy[i] != '\0'; i++)
 	{
 		for (j = 0; j <= 51; j++)
