@@ -33,6 +33,9 @@ FORMAT  controls the output as in C printf.  Interpreted sequences are:
 %i - It is used to print an integer in base 10.
 
 .RE
+%r - It is used to reverse a string.
+
+.RE
 \\" double quote
 
 .RE
